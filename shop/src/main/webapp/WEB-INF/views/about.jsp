@@ -1,12 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<h1>This is my About page</h1>
-</body>
-</html>
+<table class="table table-bordered" style="margin-left: 15px;margin-top: 50px;">
+				<thead>
+					<tr>
+						<th>Firstname</th>
+						<th>Mobile Number</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${categories}" var="category">
+						<tr class="">
+							<td>${category.name}</td>
+							<%-- <td>url(src="${images}/${category.imageURL}")</td>  --%>
+							<td><img src="${images}/${category.imageURL}" height="250px" width="250px"></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>

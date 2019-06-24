@@ -10,7 +10,7 @@
 			<div class="carousel-inner" role="listbox">
 				<!-- Slide One - Set the background image for this slide in the line below -->
 				<div class="carousel-item active"
-					style="background-image: url('http://placehold.it/1900x1080')">
+					style="background-image: url('${images}/ban1.png')">
 					<div class="carousel-caption d-none d-md-block">
 						<h3>First Slide</h3>
 						<p>This is a description for the first slide.</p>
@@ -18,7 +18,7 @@
 				</div>
 				<!-- Slide Two - Set the background image for this slide in the line below -->
 				<div class="carousel-item"
-					style="background-image: url('http://placehold.it/1900x1080')">
+					style="background-image: url('${images}/gift1.jpg')">
 					<div class="carousel-caption d-none d-md-block">
 						<h3>Second Slide</h3>
 						<p>This is a description for the second slide.</p>
@@ -26,7 +26,7 @@
 				</div>
 				<!-- Slide Three - Set the background image for this slide in the line below -->
 				<div class="carousel-item"
-					style="background-image: url('http://placehold.it/1900x1080')">
+					style="background-image: url('${images}/ban2.jpg')">
 					<div class="carousel-caption d-none d-md-block">
 						<h3>Third Slide</h3>
 						<p>This is a description for the third slide.</p>
@@ -48,24 +48,29 @@
 	<!-- Page Content -->
 	<div class="container">
 
-		<h1 class="my-4">Welcome to Modern Business</h1>
-
+		
 		<!-- Marketing Icons Section -->
-		<div class="row">
+		
+		<div class="row" style="padding-top:25px;">
+		<c:forEach items="${categories}" var="category">
 			<div class="col-lg-4 mb-4">
+			
 				<div class="card h-100">
-					<h4 class="card-header">Mugs</h4>
+					<h4 class="card-header">${category.name}</h4>
 					<div class="card-body">
-						<img src="${images}/mugs.jpg" alt="Nature" class="responsive" width="250" height="250">
+					
+						<img src="${images}/${category.imageURL}" alt="Nature" class="responsive" width="250" height="250">
 					</div>
-					<div class="card-footer">
+					<!-- <div class="card-footer">
 						<a href="#" class="btn btn-primary">Add Cart</a>
 						<label  class="float-right">Rs.100</label>
 						
-					</div>
+					</div> -->
 				</div>
 			</div>
-			<div class="col-lg-4 mb-4">
+			</c:forEach>
+			
+			<%-- <div class="col-lg-4 mb-4">
 				<div class="card h-100">
 					<h4 class="card-header">Calenders</h4>
 					<div class="card-body">
@@ -88,14 +93,15 @@
 						<label  class="float-right">Rs.300</label>
 					</div>
 				</div>
-			</div>
+			 --%>
+			 </div>
 		</div>
 		<!-- /.row -->
 
 		<!-- Portfolio Section -->
-		<h2>Portfolio Heading</h2>
+		<!--<h2>Portfolio Heading</h2>
 
-		<div class="row">
+		 <div class="row">
 			<div class="col-lg-4 col-sm-6 portfolio-item">
 				<div class="card h-100">
 					<a href="#"><img class="card-img-top"
@@ -184,9 +190,9 @@
 				</div>
 			</div>
 		</div>
-		<!-- /.row -->
+		/.row
 
-		<!-- Features Section -->
+		Features Section
 		<div class="row">
 			<div class="col-lg-6">
 				<h2>Modern Business Features</h2>
@@ -208,11 +214,11 @@
 					alt="">
 			</div>
 		</div>
-		<!-- /.row -->
+		/.row
 
 		<hr>
 
-		<!-- Call to Action Section -->
+		Call to Action Section
 		<div class="row mb-4">
 			<div class="col-md-8">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -226,4 +232,4 @@
 		</div>
 
 	</div>
-	<!-- /.container -->
+ -->	<!-- /.container -->

@@ -15,6 +15,13 @@
 	</properties>
 
 	<dependencies>
+
+		<!-- linking backend with front end project -->
+		<dependency>
+			<groupId>rs.hsk</groupId>
+			<artifactId>shopback</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

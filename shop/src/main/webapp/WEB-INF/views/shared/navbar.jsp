@@ -19,6 +19,9 @@
 					href="${contextRoot}/service">Services</a></li>
 				<li class="nav-item"><a class="nav-link"
 					href="${contextRoot}/contact">Contact</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="${contextRoot}/admin"></a></li>
+				
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#"
@@ -45,7 +48,7 @@
 					</div>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="${contextRoot}/contact"><i style="font-size:24px" class="fa">&#xf218;</i></a></li>
+					href="${contextRoot}/contact"><span style="font-size:25px;"><i class="fas fa-shopping-cart"></i></span></a></li>
 			</ul>
 		</div>
 	</div>

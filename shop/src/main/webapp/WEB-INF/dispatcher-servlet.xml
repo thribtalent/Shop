@@ -12,6 +12,7 @@ xmlns="http://www.springframework.org/schema/beans"
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    
    <context:component-scan base-package="rs.hsk.shop.controller" />
+   <context:component-scan base-package="rs.hsk.shopback" />
    
    <!--Loading static reaources  -->
    <mvc:annotation-driven />

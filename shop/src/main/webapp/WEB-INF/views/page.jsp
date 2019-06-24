@@ -26,7 +26,8 @@
 <!-- bootrap all fonts and icons -->
 <link href="${fonts}/all.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- --><!-- Bootstrap core CSS -->
+ -->
+<!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 
@@ -36,30 +37,33 @@
 </head>
 
 <body>
-
-	<%@include file="./shared/navbar.jsp"%>
 	
-	<c:if test="${userClickHome == true}">
-		<%@include file="home.jsp"%>
-	</c:if>
-	<c:if test="${userClickAbout == true}">
-		<%@include file="about.jsp"%>
-	</c:if>
-	<c:if test="${userClickService == true}">
-		<%@include file="service.jsp"%>
-	</c:if>
-	<c:if test="${userClickContact == true}">
-		<%@include file="contact.jsp"%>
-	</c:if>
+	<div class="wrapper">
+		<%@include file="./shared/navbar.jsp"%>
+		<div class="content">
+			<c:if test="${userClickHome == true}">
+				<%@include file="home.jsp"%>
+			</c:if>
+			<c:if test="${userClickAbout == true}">
+				<%@include file="about.jsp"%>
+			</c:if>
+			<c:if test="${userClickService == true}">
+				<%@include file="service.jsp"%>
+			</c:if>
+			<c:if test="${userClickContact == true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
+			
+		</div>
 
-	
-	
+		<!-- here comes footer -->
+		<%@include file="./shared/footer.jsp"%>
 
 
-	<!-- Bootstrap core JavaScript -->
-	<script src="${js}/jquery.js"></script>
-	<script src="${js}/bootstrap.bundle.min.js"></script>
-	<%@include file="./shared/footer.jsp"%>
+		<!-- Bootstrap core JavaScript -->
+		<script src="${js}/jquery.js"></script>
+		<script src="${js}/bootstrap.bundle.min.js"></script>
+	</div>
 </body>
 
 </html>
