@@ -55,7 +55,7 @@ public class PageController {
 	}
 	@RequestMapping(value = { "/admin" })
 	public ModelAndView admin() {
-		ModelAndView mv = new ModelAndView("admin");
+		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Admin");
 		mv.addObject("userClickAdmin", true);
 		return mv;
