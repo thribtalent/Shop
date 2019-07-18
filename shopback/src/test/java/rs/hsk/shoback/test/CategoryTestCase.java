@@ -26,21 +26,21 @@ public class CategoryTestCase {
 	}
 
 	@Test
-	public void testAddCategory() {
+	/*public void testAddCategory() {
 
 		category = new Category();
 
 		category.setName("Calender");
 		category.setDescription("This is  category");
-		category.setImageURL("cal.png");
+		category.setImageURL("pilo.png");
 
 		assertEquals("Error while adding category", true, categoryDAO.add(category));
 
-	}
+	}*/
 	public void testUpdateCategory() {
 
-		category = categoryDAO.get(4);
-		category.setImageURL("cal.jpg");
+		category = categoryDAO.get(3);
+		category.setName("Pilow");
 		assertEquals("Successfully updated a single category in the table!", true, categoryDAO.update(category));
 	}
 }
